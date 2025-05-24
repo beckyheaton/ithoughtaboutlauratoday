@@ -1,0 +1,25 @@
+# staticman.yml
+# This configures the Staticman bot to save form submissions as YAML files in _data/paragraphs
+
+# You can ignore the encryption key unless you're encrypting fields
+encryptionKey: null
+
+# Whether you want to approve submissions before they show up
+moderation: false
+
+# Add a timestamp to each file
+generatedFields:
+  date:
+    type: date
+    options:
+      format: iso8601
+
+# Form configuration
+properties:
+  paragraphs:
+    path: "_data/paragraphs"
+    filename: "para-:timestamp"
+    format: "yml"
+    fields:
+      message:
+        required: true
