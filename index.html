@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>I thought about Laura today</title>
-  <link rel="stylesheet" href="styles.css"> 
+    <meta charset="UTF-8">
+    <title>I thought about Laura today</title>
+    <link rel="stylesheet" href="styles.css"> 
   
 </head>
 
-<body>
-  <h1>I thought about Laura today.</h1>
-
+<body>  
+  
     <section id="submission-form">
-        <h2>Submit a Paragraph</h2>
-        <iframe 
-        src="https://docs.google.com/forms/d/e/1FAIpQLSdgb_rwrzcA8fHHmSH3lH_x3xbKM2svU29iP7hnztnk0WPzKg/viewform?embedded=true"
-        width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
-        Loading…
-        </iframe>
+        <h2>What made you think of Laura today?</h2>
+        <form id="laura-form">
+            <textarea
+            name="What made you think of Laura today?"
+            placeholder="Write something..."
+            required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="form-response" style="display:none;">Thank you for submitting 🕊️</p>
     </section>
 
+
+
+
+
+    
+    <!-- <section id="submission-form">
+        <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdgb_rwrzcA8fHHmSH3lH_x3xbKM2svU29iP7hnztnk0WPzKg/viewform?embedded=true"
+            width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
+            Loading…
+        </iframe>
+    </section> -->
+
     <section id="paragraphs">
-        <h2>Submitted Paragraphs</h2>
         <div id="paragraph-list"></div>
     </section>      
-    
+
     <script src="scripts.js"></script>
 
 </body>

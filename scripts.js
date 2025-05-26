@@ -20,5 +20,36 @@ async function fetchParagraphs() {
     }
   }
   
-  fetchParagraphs();
+fetchParagraphs();
+
+// **************** Replace Form *******************
+
+document.getElementById('laura-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const textarea = form.querySelector('textarea');
+  const message = textarea.value;
+
+  const responseDisplay = document.getElementById('form-response');
+
+  try {
+    await fetch('https://api.sheetbest.com/sheets/854acc31-7133-467e-8c7f-da99d1dd3266', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        "What made you think of Laura today?": message
+      })
+    });
+
+    form.reset();
+    responseDisplay.style.display = 'block';
+  } catch (err) {
+    alert('Something went wrong 😢');
+    console.error(err);
+  }
+});
+
   
