@@ -29,21 +29,15 @@
 <body>
   <h1>I thought about Laura today.</h1>
 
-  <section id="para-list">
-    {% for p in site.data.paragraphs %}
-      <p>{{ p.message }}</p>
-    {% endfor %}
+  <section id="submission-form">
+    <h2>Submit a Paragraph</h2>
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdgb_rwrzcA8fHHmSH3lH_x3xbKM2svU29iP7hnztnk0WPzKg/viewform?embedded=true"
+      width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
+      Loading…
+    </iframe>
   </section>
+  
 
-  <hr />
-
-    <form id="para-form"
-    action="https://staticmanlab.herokuapp.com/v3/entry/github/beckyheaton/ithoughtaboutlauratoday/main/paragraphs"
-    method="POST">
-
-
-    <textarea name="fields[message]" required placeholder="Write a paragraph..."></textarea>
-    <button type="submit">Submit</button>
-  </form>
 </body>
 </html>
