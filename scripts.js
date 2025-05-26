@@ -20,7 +20,7 @@ async function fetchParagraphs() {
         wrapper.classList.add('entry');
 
         // Combine timestamp and paragraph into a single block
-        wrapper.innerHTML = `<br>${formatTimestampFancy(timestamp)}<br>${paragraph}`;
+        wrapper.innerHTML = `<br><br> ${paragraph} <br><em>${formatTimestampFancy(timestamp)}</em>`;
         
         container.appendChild(wrapper);
     }
