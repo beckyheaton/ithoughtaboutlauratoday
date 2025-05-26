@@ -1,18 +1,18 @@
 body {
     font-size: 15px;
     line-height: 1.5;
-    color: rgb(60, 0, 255); /* Sets text color*/
-    background-color: rgb(255, 255, 255); /* Sets background color */
+    color: rgb(60, 0, 255); 
+    background-color: rgb(255, 255, 255);
     margin-left: 100px;
     margin-right: 100px;
 }
 
 #title {
     position: fixed;
-    top: 30px;                     /* Fix the title to the top of the screen */
-    width: 100%;                /* Ensure it spans the full width */
+    top: 30px;                    
+    width: 100%;              
     text-align: center;
-    left: 50%;                  /* Center horizontally */
+    left: 50%;                  
     transform: translateX(-50%);
 }
 
@@ -39,7 +39,7 @@ body {
 
 #paragraphs {
     position: relative;
-    margin-top: 230px;           /* Adjust this value to match the height of #title */
+    margin-top: 230px;           
     width: 50%;
     left: 50%;
     transform: translateX(-50%);
