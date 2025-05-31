@@ -14,14 +14,14 @@ async function fetchParagraphs() {
     reversed.forEach(entry => {
     const paragraph = entry["What made you think of Laura today?"];
     const timestamp = entry["Timestamp"];
-    const name = entry["Name"]; // ✅ ADDED: extract the name column
+    const name = entry["Name"]; // extract the name column
 
     if (paragraph && timestamp) {
         const wrapper = document.createElement('div');
         wrapper.classList.add('entry');
 
         // Combine timestamp and paragraph into a single block
-        wrapper.innerHTML = `<br><br>${name ? `<strong>${name}</strong><br>` : ""}${paragraph}<br><em>${formatTimestampFancy(timestamp)}</em>`;
+        wrapper.innerHTML = `<br><br>${paragraph} <em>${name ? `<br>- ${name}` : ""}</em><br><em>${formatTimestampFancy(timestamp)}</em>`;
         
         container.appendChild(wrapper);
     }
@@ -60,7 +60,7 @@ function getOrdinalSuffix(day) {
 
 fetchParagraphs();
 
-// ✅ Prevent form from submitting when pressing Enter in the name input
+// Prevent form from submitting when pressing Enter in the name input
 document.querySelector('input[name="Name"]').addEventListener('keydown', function(e) {
     if (e.key === 'Enter') e.preventDefault();
 });
