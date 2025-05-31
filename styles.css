@@ -18,6 +18,7 @@ body {
 
 #form {
     position: fixed;
+    z-index: 9999;
     top: 112.5px;
     width: calc(50% - 100px);
     left: 50%;
@@ -32,14 +33,31 @@ body {
     position: relative;
 }
 
-#laura-form textarea {
-  width: 100%;       /* or 100%, or any px/rem value */
-  height: 80px;      /* sets the initial visible height */
+#laura-form textarea { 
+    width: calc(100% - 5px);     
+    padding: 5px;             
+    height: 80px;      /* sets the initial visible height */
+    background-color: transparent;  
+    border: 1px solid rgb(43, 0, 255); 
+    font-size: inherit;   
+    color: inherit;      
+    font-family: inherit;    
+}
+
+#laura-form input {
+    width: calc(100% - 5px);     
+    padding: 5px;                    
+    background-color: transparent;     
+    border: 1px solid rgb(43, 0, 255);   
+    margin-bottom: 10px; /* space between input and textarea */    
+    font-size: inherit;   
+    color: inherit;      
+    font-family: inherit;                   
 }
 
 #paragraphs {
     position: relative;
-    margin-top: 230px;           
+    margin-top: 270px;           
     width: 50%;
     left: 50%;
     transform: translateX(-50%);

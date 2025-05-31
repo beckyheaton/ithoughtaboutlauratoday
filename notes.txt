@@ -1,0 +1,5 @@
+
+- add place to leave name
+- hide ascii art
+- add little picture
+- remove accidental enter to submit
