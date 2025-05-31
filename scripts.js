@@ -73,8 +73,8 @@ document.getElementById('laura-form').addEventListener('submit', async function(
     const form = e.target;
     const textarea = form.querySelector('textarea');
     const message = textarea.value;
-    const nameInput = form.querySelector('input[name="Name"]'); // ✅ ADDED: get name input field
-    const name = nameInput ? nameInput.value : ""; // ✅ ADDED: safely extract value or fallback to ""
+    const nameInput = form.querySelector('input[name="Name"]'); // get name input field
+    const name = nameInput ? nameInput.value : ""; // safely extract value or fallback to ""
 
     const responseDisplay = document.getElementById('form-response');
 
@@ -86,7 +86,7 @@ document.getElementById('laura-form').addEventListener('submit', async function(
             },
             body: JSON.stringify({
                 "What made you think of Laura today?": message,
-                "Name": name, // ✅ ADDED: include name in the submission
+                "Name": name, // include name in the submission
                 "Timestamp": new Date().toISOString()
             })
         });

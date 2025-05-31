@@ -72,9 +72,25 @@ button[type="submit"]:hover {
     color: white;
 }
 
+#form-response {
+    display: inline-flex; /* Make it behave like a text block with alignment */
+    padding-top: 15px;
+    align-items: center;  /* Align image and text vertically */
+    justify-content: center; /* Center everything horizontally */
+    gap: 0.5em; /* Optional spacing between text and image */
+    text-align: center; /* Ensure the text centers if wrapped */
+    margin: 0 auto;  /* Center the container itself */
+}
+
+img.smallImg {
+    width: 3em;
+    height: 3em;
+    vertical-align: middle;
+}
+
 #paragraphs {
     position: relative;
-    margin-top: 295px;           
+    margin-top: 310px;           
     width: 50%;
     left: 50%;
     transform: translateX(-50%);
