@@ -74,7 +74,7 @@ button[type="submit"]:hover {
 
 #form-response {
     display: inline-flex; /* Make it behave like a text block with alignment */
-    padding-top: 15px;
+    padding-top: 12px;
     align-items: center;  /* Align image and text vertically */
     justify-content: center; /* Center everything horizontally */
     gap: 0.5em; /* Optional spacing between text and image */
