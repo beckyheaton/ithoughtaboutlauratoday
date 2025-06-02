@@ -96,6 +96,28 @@ img.smallImg {
     transform: translateX(-50%);
 }
 
+/* Phone Screen: */
+@media (max-width: 600px) { /* ✅ Only applies to small screen widths */
+
+    body {
+        margin-left: 0; /* ✅ Remove side margins on mobile */
+        margin-right: 0;
+    }
+
+    #form {
+        width: 90%; /* ✅ Form spans full screen width */
+        left: 5%;
+        transform: none;
+    }
+
+    #paragraphs {
+        width: 90%; /* ✅ Paragraphs also span full screen width */
+        left: 5%;
+        transform: none;
+    }
+}
+
+
 
 
 

@@ -3,3 +3,5 @@
 - hide ascii art
 - add little picture
 - make phone version
+- add sound
+- add link to nics photo album 
