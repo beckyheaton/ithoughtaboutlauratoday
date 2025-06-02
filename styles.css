@@ -97,21 +97,21 @@ img.smallImg {
 }
 
 /* Phone Screen: */
-@media (max-width: 600px) { /* ✅ Only applies to small screen widths */
+@media (max-width: 768px) { 
 
     body {
-        margin-left: 0; /* ✅ Remove side margins on mobile */
+        margin-left: 0; 
         margin-right: 0;
     }
 
     #form {
-        width: 90%; /* ✅ Form spans full screen width */
+        width: 90%; 
         left: 5%;
         transform: none;
     }
 
     #paragraphs {
-        width: 90%; /* ✅ Paragraphs also span full screen width */
+        width: 90%; 
         left: 5%;
         transform: none;
     }
