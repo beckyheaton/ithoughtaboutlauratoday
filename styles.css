@@ -21,6 +21,11 @@ body {
     box-sizing: border-box;     /* so padding doesn't break layout */
 }
 
+#syd-time {
+    text-align: right;
+    line-height: 1.2;
+}
+
 #title {
     position: static;        
     transform: none;

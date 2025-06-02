@@ -68,29 +68,39 @@ document.querySelector('input[name="Name"]').addEventListener('keydown', functio
 function updateClocks() {
     const now = new Date();
 
-    const options = {
-        hour: '2-digit',
+    const nyTime = now.toLocaleTimeString('en-US', {
+        timeZone: 'America/New_York',
+        hour: 'numeric',
         minute: '2-digit',
-        hour12: false,
-        timeZoneName: 'short'
-    };
+        hour12: true
+    }).toUpperCase();
 
-    const ny = now.toLocaleTimeString('en-US', {
-        ...options,
-        timeZone: 'America/New_York'
+    const nyDay = now.toLocaleDateString('en-US', {
+        timeZone: 'America/New_York',
+        weekday: 'long'
     });
 
-    const syd = now.toLocaleTimeString('en-AU', {
-        ...options,
-        timeZone: 'Australia/Sydney'
+    const sydTime = now.toLocaleTimeString('en-AU', {
+        timeZone: 'Australia/Sydney',
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+    }).toUpperCase();
+
+    const sydDay = now.toLocaleDateString('en-AU', {
+        timeZone: 'Australia/Sydney',
+        weekday: 'long'
     });
 
-    document.getElementById('ny-time').textContent = `New York: ${ny}`;
-    document.getElementById('syd-time').textContent = `Sydney: ${syd}`;
+    // Two-line format
+    document.getElementById('ny-time').innerHTML = `New York<br>${nyDay}, ${nyTime}`;
+    document.getElementById('syd-time').innerHTML = `Sydney<br>${sydDay}, ${sydTime}`;
 }
 
 updateClocks();
-setInterval(updateClocks, 60 * 1000); // update every minute
+setInterval(updateClocks, 60000);
+
+
 
 
 // **************** Replace Form *******************
