@@ -7,13 +7,25 @@ body {
     margin-right: 100px;
 }
 
-#title {
+#time-bar {
     position: fixed;
-    top: 30px;                    
-    width: 100%;              
+    top: 30px;
+    left: 0;                     
+    width: 100vw;                
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    font-size: inherit;
+    color: inherit;
+    box-sizing: border-box;     /* so padding doesn't break layout */
+}
+
+#title {
+    position: static;        
+    transform: none;
     text-align: center;
-    left: 50%;                  
-    transform: translateX(-50%);
+    margin: 0 auto;
 }
 
 #form {
@@ -34,7 +46,8 @@ body {
 }
 
 #laura-form textarea { 
-    width: calc(100% - 5px);     
+    width: 100%;    
+    box-sizing: border-box; /* ensures width includes padding + border */ 
     padding: 5px;             
     height: 80px;      /* sets the initial visible height */
     background-color: transparent;  
@@ -45,7 +58,8 @@ body {
 }
 
 #laura-form input {
-    width: calc(100% - 5px);     
+    width: 100%;    
+    box-sizing: border-box; /* ensures width includes padding + border */  
     padding: 5px;                    
     background-color: transparent;     
     border: 1px solid rgb(43, 0, 255);   
@@ -102,6 +116,12 @@ img.smallImg {
     body {
         margin-left: 0; 
         margin-right: 0;
+    }
+
+    #time-bar {                    
+        width: 90%;    
+        left: 5%;            
+        padding: 0;
     }
 
     #form {

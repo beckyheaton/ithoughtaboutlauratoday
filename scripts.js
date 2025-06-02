@@ -57,13 +57,41 @@ function getOrdinalSuffix(day) {
     }
 }
 
-
 fetchParagraphs();
 
 // Prevent form from submitting when pressing Enter in the name input
 document.querySelector('input[name="Name"]').addEventListener('keydown', function(e) {
     if (e.key === 'Enter') e.preventDefault();
 });
+
+// **************** Wold Clock *********************
+function updateClocks() {
+    const now = new Date();
+
+    const options = {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false,
+        timeZoneName: 'short'
+    };
+
+    const ny = now.toLocaleTimeString('en-US', {
+        ...options,
+        timeZone: 'America/New_York'
+    });
+
+    const syd = now.toLocaleTimeString('en-AU', {
+        ...options,
+        timeZone: 'Australia/Sydney'
+    });
+
+    document.getElementById('ny-time').textContent = `New York: ${ny}`;
+    document.getElementById('syd-time').textContent = `Sydney: ${syd}`;
+}
+
+updateClocks();
+setInterval(updateClocks, 60 * 1000); // update every minute
+
 
 // **************** Replace Form *******************
 
