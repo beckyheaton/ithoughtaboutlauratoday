@@ -5,6 +5,15 @@ async function fetchParagraphs() {
     const res = await fetch(url);
     const data = await res.json();
 
+    // Debugging:
+    console.log("Raw data from SheetBest:", data); // ← Add this line
+
+    if (!Array.isArray(data)) {
+      console.error("Expected an array, but got:", data);
+      return;
+    }
+    // Debugging
+
     const container = document.getElementById('paragraph-list');
     container.innerHTML = ""; // optional: clear before rendering
 
