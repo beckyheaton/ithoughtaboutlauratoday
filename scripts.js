@@ -1,5 +1,5 @@
 async function fetchParagraphs() {
-  const url = "https://api.sheetbest.com/sheets/854acc31-7133-467e-8c7f-da99d1dd3266";
+  const url = "https://script.google.com/macros/s/AKfycbxZbnyL6ZJyxtq7LTdZMcEoJP6VxRxpUw1dY_2j1zZohGXHoBUWpJ6CwNnt4k6QaY_InA/exec";
 
   try {
     const res = await fetch(url);
@@ -126,7 +126,7 @@ document.getElementById('laura-form').addEventListener('submit', async function(
     const responseDisplay = document.getElementById('form-response');
 
     try {
-        await fetch('https://api.sheetbest.com/sheets/854acc31-7133-467e-8c7f-da99d1dd3266', {
+        await fetch('https://script.google.com/macros/s/AKfycbxZbnyL6ZJyxtq7LTdZMcEoJP6VxRxpUw1dY_2j1zZohGXHoBUWpJ6CwNnt4k6QaY_InA/exec', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
