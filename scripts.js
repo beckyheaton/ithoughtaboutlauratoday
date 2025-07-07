@@ -1,5 +1,5 @@
 async function fetchParagraphs() {
-  const url = "https://script.google.com/macros/s/AKfycbxZbnyL6ZJyxtq7LTdZMcEoJP6VxRxpUw1dY_2j1zZohGXHoBUWpJ6CwNnt4k6QaY_InA/exec";
+  const url = "https://script.google.com/macros/s/AKfycby7lNbz_eeb-j6D0QO1FRgFA0q2F9Hof_3Or4qXRCKhQ0sGdKTD3M0q51L8kK0JnHz8DQ/exec";
 
   try {
     const res = await fetch(url);
@@ -126,7 +126,7 @@ document.getElementById('laura-form').addEventListener('submit', async function(
     const responseDisplay = document.getElementById('form-response');
 
     try {
-        await fetch('https://script.google.com/macros/s/AKfycbxZbnyL6ZJyxtq7LTdZMcEoJP6VxRxpUw1dY_2j1zZohGXHoBUWpJ6CwNnt4k6QaY_InA/exec', {
+        await fetch('https://script.google.com/macros/s/AKfycby7lNbz_eeb-j6D0QO1FRgFA0q2F9Hof_3Or4qXRCKhQ0sGdKTD3M0q51L8kK0JnHz8DQ/exec', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
